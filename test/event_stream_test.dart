@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:kysion_event_bus/kysion_event_bus.dart';
-import 'dart:async';
 
 void main() {
   late KysionEventBus eventBus;
@@ -101,12 +100,9 @@ void main() {
 
     // 同步测试，接收直接发送到EventBus的事件 - 全新的更简单版本
     test('应该能够接收EventBus发送的事件 - 同步测试', () {
-      // 准备测试
-      bool receivedEvent = false;
-
       // 用计数器标记事件处理
       eventBus.on<String>().listen((_) {
-        receivedEvent = true;
+        // 仅验证监听功能
       });
 
       // 同步发送，不等待

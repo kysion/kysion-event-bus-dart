@@ -37,11 +37,7 @@ void main() {
     });
 
     test('应该能处理基本的事件分发', () {
-      bool eventReceived = false;
-
-      final subscription = eventBus.on<String>().listen((event) {
-        eventReceived = true;
-      });
+      final subscription = eventBus.on<String>().listen((event) {});
 
       // 不等待，同步发送
       eventBus.fireAndForget('test');

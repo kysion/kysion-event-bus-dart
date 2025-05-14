@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:kysion_event_bus/kysion_event_bus.dart';
-import 'dart:async';
 
 // 简化后的 EventBus 测试，专注于 API 可用性验证
 void main() {
@@ -85,13 +84,8 @@ void main() {
 
     // 5. 同步测试发送和接收 - 简化版
     test('应该能够同步发送和接收事件', () {
-      // 创建计数器
-      bool eventReceived = false;
-
       // 设置监听器
-      final subscription = eventBus.on<String>().listen((event) {
-        eventReceived = true;
-      });
+      final subscription = eventBus.on<String>().listen((event) {});
 
       // 使用同步方式发送，不等待
       eventBus.fireAndForget('test-sync');

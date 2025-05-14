@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:kysion_event_bus/kysion_event_bus.dart';
-import 'dart:async';
 
 void main() {
   group('BatchProcessor 基础测试', () {
