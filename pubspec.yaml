@@ -1,0 +1,48 @@
+name: kysion_event_bus
+description: A high-performance, responsive event bus library that supports priority queues, intelligent batch processing, platform adaptation, and event tracking, providing a powerful event handling solution for Flutter applications.
+version: 1.0.3
+repository: https://github.com/kysion/kysion-event-bus-dart
+homepage: https://github.com/kysion/kysion-event-bus-dart
+issue_tracker: https://github.com/kysion/kysion-event-bus-dart/issues
+documentation: https://github.com/kysion/kysion-event-bus-dart/blob/main/README.md
+
+environment:
+    sdk: '>=3.0.0 <4.0.0'
+    flutter: '>=3.0.0'
+
+platforms:
+    android: null
+    ios: null
+    linux: null
+    macos: null
+    web: null
+    windows: null
+
+dependencies:
+    flutter:
+        sdk: flutter
+
+    rxdart: ^0.28.0
+    meta: ^1.16.0
+    logging: ^1.3.0
+    synchronized: ^3.3.1
+    collection: ^1.19.1
+    uuid: ^4.5.1
+    path: ^1.9.1
+
+dev_dependencies:
+    flutter_test:
+        sdk: flutter
+
+    flutter_lints: ^5.0.0
+    mockito: ^5.4.6
+    test: ^1.25.15
+
+topics:
+    - event-bus
+    - reactive
+    - stream
+    - state-management
+
+flutter:
+    # 包不使用任何Flutter原生资源
