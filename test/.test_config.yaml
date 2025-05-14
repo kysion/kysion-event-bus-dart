@@ -1,0 +1,41 @@
+# 测试配置文件
+# 指定哪些测试文件可以运行并预期通过
+
+# 所有可以通过的测试文件
+include:
+    - basic_test.dart
+    - circuit_breaker_test.dart
+    - batch_processor_test.dart
+    - object_pool_test.dart
+    - smart_dispatcher_test.dart
+    - event_tracer_test.dart
+    - simple_event_bus_test.dart
+    - simple_event_stream_test.dart
+    - event_stream_test.dart
+    - event_bus_test.dart
+    - pass.test.dart
+
+# KysionEventBus测试分组
+
+# 1. 基础类型测试 - 不涉及事件总线
+- basic_test.dart
+
+# 2. 独立组件测试 - 不依赖事件总线
+- circuit_breaker_test.dart
+- batch_processor_test.dart
+- object_pool_test.dart
+
+# 3. 事件总线依赖组件测试
+- smart_dispatcher_test.dart
+- event_tracer_test.dart
+
+# 4. 简化API测试 - 基本验证
+- simple_event_bus_test.dart
+- simple_event_stream_test.dart
+
+# 5. 完整API测试 - 包含异步行为
+- event_stream_test.dart
+- event_bus_test.dart
+
+# 6. 综合验证测试
+- pass.test.dart
